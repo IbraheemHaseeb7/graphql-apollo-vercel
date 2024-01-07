@@ -54,10 +54,9 @@ const resolvers = {
 
 const app = express();
 const server = new ApolloServer({ typeDefs, resolvers });
+server.applyMiddleware({ app, path: "/graphql" });
 
-server.applyMiddleware({ app });
-
-app.listen({ port: process.env.PORT }, () => {
+app.listen(3000, () => {
   console.log(
     `Server ready at http://localhost:<span class="math-inline">\{process\.env\.PORT\}</span>{server.graphqlPath}`
   );
