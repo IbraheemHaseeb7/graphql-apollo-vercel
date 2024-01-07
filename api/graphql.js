@@ -1,4 +1,4 @@
-import { ApolloServer, gql, makeExecutableSchema } from "apollo-server-micro";
+import { ApolloServer, gql } from "apollo-server-micro";
 
 const typeDefs = gql`
   # this is my first and testing api
