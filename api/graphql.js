@@ -1,4 +1,4 @@
-import { ApolloServer } from "apollo-server-micro";
+import { ApolloServer, makeExecutableSchema } from "apollo-server-micro";
 import { typeDefs, resolvers } from "./schema";
 
 export default new ApolloServer({

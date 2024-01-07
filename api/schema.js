@@ -24,8 +24,6 @@ export const typeDefs = gql`
   }
 `;
 
-console.log(data.employees);
-
 export const resolvers = {
   Query: {
     employees: () => data.employees,
