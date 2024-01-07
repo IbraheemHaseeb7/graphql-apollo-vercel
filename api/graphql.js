@@ -44,6 +44,7 @@ export default new ApolloServer({
   resolvers,
   introspection: true,
   playground: true,
+  cache: "bounded",
 }).createHandler({
   path: "/api/graphql",
 });
