@@ -54,7 +54,7 @@ const resolvers = {
 
 const app = express();
 const server = new ApolloServer({ typeDefs, resolvers });
-server.applyMiddleware({ app, path: "/api/index/graphql" });
+server.applyMiddleware({ app, path: "/api/index" });
 
 app.listen(3000, () => {
   console.log(
