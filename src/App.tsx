@@ -4,9 +4,9 @@ import { gql, useQuery } from "@apollo/client";
 function App() {
   const query = gql`
     query {
-      employees: {
-        name,
-        id,
+      employees {
+        name
+        id
         salary
       }
     }
