@@ -24,13 +24,19 @@ const typeDefs = gql`
   }
 `;
 
+const employees = [
+  { name: "John Doe", id: 1, salary: 35000 },
+  { name: "Shawn Larry", id: 2, salary: 45000 },
+  { name: "Samuel Frank", id: 3, salary: 65000 },
+];
+
 const resolvers = {
   Query: {
-    employees: () => data.employees,
+    employees: () => employees,
     filterEmployeesByName: (parent, { name }) =>
-      data.employees.find((employee) => employee.name === name) || null,
+      employees.find((employee) => employee.name === name) || null,
     filterEmployeesById: (parent, { id }) =>
-      data.employees.find((employee) => employee.id === id) || null,
+      employees.find((employee) => employee.id === id) || null,
   },
 };
 
